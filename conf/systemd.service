@@ -1,5 +1,5 @@
 [Unit]
-Description=Small description of the service
+Description=Audiobokshelf
 After=network.target
 
 [Service]
@@ -7,9 +7,11 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/script
+ExecStart=__YNH_NPM__ run dev
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
+Restart=on-failure
+RestartSec=5s
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these 

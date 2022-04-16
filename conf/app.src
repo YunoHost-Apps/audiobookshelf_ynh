@@ -1,7 +1,7 @@
-SOURCE_URL=url of app's source
-SOURCE_SUM=sha256 checksum
+SOURCE_URL=https://github.com/advplyr/audiobookshelf/archive/refs/tags/v1.7.2.tar.gz
+SOURCE_SUM=47aa5aaa2ee7818fb5ff842447bbfa52500a90a971af319576ad51239543f6bb
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
+#SOURCE_FILENAME=
 SOURCE_EXTRACT=true
