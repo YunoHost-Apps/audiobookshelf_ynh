@@ -4,7 +4,7 @@
     "packaging_format": 1,
     "description": {
         "en": "Audiobook server for managing and playing your audiobooks",
-        "fr": "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
+        "fr": "Serveur de livres audio pour gérer et lire vos livres audio"
     },
     "version": "1.7.2~ynh1",
     "url": "https://audiobookshelf.org/",
@@ -12,7 +12,6 @@
         "license": "GPLv3",
         "website": "https://audiobookshelf.org/",
         "demo": "https://audiobookshelf.org/",
-        "admindoc": "https://yunohost.org/packaging_apps",
         "userdoc": "https://www.audiobookshelf.org/docs",
         "code": "https://github.com/advplyr/audiobookshelf"
     },
