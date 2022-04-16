@@ -49,7 +49,6 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 
 * Site officiel de l'app : https://audiobookshelf.org/
 * Documentation officielle utilisateur : https://www.audiobookshelf.org/docs
-* Documentation officielle de l'admin : https://yunohost.org/packaging_apps
 * Dépôt de code officiel de l'app : https://github.com/advplyr/audiobookshelf
 * Documentation YunoHost pour cette app : https://yunohost.org/app_audiobookshelf
 * Signaler un bug : https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues
