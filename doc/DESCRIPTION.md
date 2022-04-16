@@ -1,9 +1,14 @@
-Some long and extensive description of what the app is and does, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks.
 
 ### Features
 
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco ;
-- Laboris nisi ut aliquip ex ea commodo consequat ;
-- Duis aute irure dolor in reprehenderit in voluptate ;
-- Velit esse cillum dolore eu fugiat nulla pariatur ;
-- Excepteur sint occaecat cupidatat non proident, sunt in culpa."
+* Fully **open-source**, including the [android & iOS app](https://github.com/advplyr/audiobookshelf-app) *(in beta)*
+* Stream all audiobook formats on the fly
+* Multi-user support w/ custom permissions
+* Keeps progress per user and syncs across devices
+* Auto-detects library updates, no need to re-scan
+* Upload audiobooks w/ bulk upload drag and drop folders
+* Backup your metadata + automated daily backups
+* Progressive Web App (PWA)
+* Chromecast support on the web app
+* Fetch metadata and cover art from several sources
