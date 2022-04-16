@@ -9,13 +9,13 @@
     "version": "1.7.2~ynh1",
     "url": "https://audiobookshelf.org/",
     "upstream": {
-        "license": "GPLv3",
+        "license": "AGPL-3.0-only",
         "website": "https://audiobookshelf.org/",
         "demo": "https://audiobookshelf.org/",
         "userdoc": "https://www.audiobookshelf.org/docs",
         "code": "https://github.com/advplyr/audiobookshelf"
     },
-    "license": "free",
+    "license": "AGPL-3.0-only",
     "maintainer": {
         "name": "Navan Chauhan",
         "email": "audiobookshelf_ynh@navan.email"
