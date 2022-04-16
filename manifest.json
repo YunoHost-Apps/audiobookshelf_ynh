@@ -9,7 +9,7 @@
     "version": "1.7.2~ynh1",
     "url": "https://audiobookshelf.org/",
     "upstream": {
-        "license": "free",
+        "license": "GPLv3",
         "website": "https://audiobookshelf.org/",
         "demo": "https://audiobookshelf.org/",
         "admindoc": "https://yunohost.org/packaging_apps",
