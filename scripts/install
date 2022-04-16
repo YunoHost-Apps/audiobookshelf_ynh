@@ -104,7 +104,7 @@ ynh_add_nginx_config
 
 pushd $final_path
  	ynh_use_nodejs
-	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH $ynh_npm client
+	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH $ynh_npm run client
 popd
 
 #=================================================
