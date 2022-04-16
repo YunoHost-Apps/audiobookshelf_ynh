@@ -1,30 +1,34 @@
-# Example app pour YunoHost
+# Audiobookshelf pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/example.svg)](https://dash.yunohost.org/appci/app/example) ![](https://ci-apps.yunohost.org/ci/badges/example.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/example.maintain.svg)  
-[![Installer Example app avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=example)
+[![Niveau d'intégration](https://dash.yunohost.org/integration/audiobookshelf.svg)](https://dash.yunohost.org/appci/app/audiobookshelf) ![](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.maintain.svg)  
+[![Installer Audiobookshelf avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=audiobookshelf)
 
 *[Read this readme in english.](./README.md)*
 *[Lire ce readme en français.](./README_fr.md)*
 
-> *Ce package vous permet d'installer Example app rapidement et simplement sur un serveur YunoHost.
+> *Ce package vous permet d'installer Audiobookshelf rapidement et simplement sur un serveur YunoHost.
 Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
 
 ## Vue d'ensemble
 
-Some long and extensive description of what the app is and does, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks.
 
 ### Features
 
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco ;
-- Laboris nisi ut aliquip ex ea commodo consequat ;
-- Duis aute irure dolor in reprehenderit in voluptate ;
-- Velit esse cillum dolore eu fugiat nulla pariatur ;
-- Excepteur sint occaecat cupidatat non proident, sunt in culpa."
+* Fully **open-source**, including the [android & iOS app](https://github.com/advplyr/audiobookshelf-app) *(in beta)*
+* Stream all audiobook formats on the fly
+* Multi-user support w/ custom permissions
+* Keeps progress per user and syncs across devices
+* Auto-detects library updates, no need to re-scan
+* Upload audiobooks w/ bulk upload drag and drop folders
+* Backup your metadata + automated daily backups
+* Progressive Web App (PWA)
+* Chromecast support on the web app
+* Fetch metadata and cover art from several sources
 
+**Version incluse :** 1.7.2~ynh1
 
-**Version incluse :** 1.0~ynh1
-
-**Démo :** https://demo.example.com
+**Démo :** https://audiobookshelf.org/
 
 ## Captures d'écran
 
@@ -32,37 +36,33 @@ Some long and extensive description of what the app is and does, lorem ipsum dol
 
 ## Avertissements / informations importantes
 
-* Any known limitations, constrains or stuff not working, such as (but not limited to):
-    * requiring a full dedicated domain ?
-    * architectures not supported ?
-    * not-working single-sign on or LDAP integration ?
-    * the app requires an important amount of RAM / disk / .. to install or to work properly
-    * etc...
+## Limitations
 
-* Other infos that people should be aware of, such as:
-    * any specific step to perform after installing (such as manually finishing the install, specific admin credentials, ...)
-    * how to configure / administrate the application if it ain't obvious
-    * upgrade process / specificities / things to be aware of ?
-    * security considerations ?
+* Audiobookshelf can only be installed on a dedicated domain
+* No LDAP support
+
+## Administration
+
+* Default user is "root" with no password
 
 ## Documentations et ressources
 
-* Site officiel de l'app : https://example.com
-* Documentation officielle utilisateur : https://yunohost.org/apps
+* Site officiel de l'app : https://audiobookshelf.org/
+* Documentation officielle utilisateur : https://www.audiobookshelf.org/docs
 * Documentation officielle de l'admin : https://yunohost.org/packaging_apps
-* Dépôt de code officiel de l'app : https://some.forge.com/example/example
-* Documentation YunoHost pour cette app : https://yunohost.org/app_example
-* Signaler un bug : https://github.com/YunoHost-Apps/example_ynh/issues
+* Dépôt de code officiel de l'app : https://github.com/advplyr/audiobookshelf
+* Documentation YunoHost pour cette app : https://yunohost.org/app_audiobookshelf
+* Signaler un bug : https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues
 
 ## Informations pour les développeurs
 
-Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/example_ynh/tree/testing).
+Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing).
 
 Pour essayer la branche testing, procédez comme suit.
 ```
-sudo yunohost app install https://github.com/YunoHost-Apps/example_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing --debug
 ou
-sudo yunohost app upgrade example -u https://github.com/YunoHost-Apps/example_ynh/tree/testing --debug
+sudo yunohost app upgrade audiobookshelf -u https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing --debug
 ```
 
 **Plus d'infos sur le packaging d'applications :** https://yunohost.org/packaging_apps
