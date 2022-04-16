@@ -11,20 +11,20 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks.
+Audiobookshelf est un serveur de livres audio auto-hébergé pour gérer et lire vos livres audio.
 
-### Features
+### Caractéristiques
 
-* Fully **open-source**, including the [android & iOS app](https://github.com/advplyr/audiobookshelf-app) *(in beta)*
-* Stream all audiobook formats on the fly
-* Multi-user support w/ custom permissions
-* Keeps progress per user and syncs across devices
-* Auto-detects library updates, no need to re-scan
-* Upload audiobooks w/ bulk upload drag and drop folders
-* Backup your metadata + automated daily backups
-* Progressive Web App (PWA)
-* Chromecast support on the web app
-* Fetch metadata and cover art from several sources
+* Entièrement **open-source**, y compris l'[application Android et iOS](https://github.com/advplyr/audiobookshelf-app) *(en version bêta)*
+* Diffusez tous les formats de livres audio à la volée
+* Prise en charge multi-utilisateurs avec autorisations personnalisées
+* Conserve la progression par utilisateur et se synchronise sur tous les appareils
+* Détecte automatiquement les mises à jour de la bibliothèque, pas besoin de re-scanner
+* Téléchargez des livres audio avec dossiers de glisser-déposer
+* Sauvegardez vos métadonnées et sauvegardes quotidiennes automatisées
+* Application Web progressive (PWA)
+* Prise en charge de Chromecast sur l'application Web
+* Récupère les métadonnées et les pochettes à partir de plusieurs sources
 
 **Version incluse :** 1.7.2~ynh1
 
@@ -36,15 +36,14 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 
 ## Avertissements / informations importantes
 
-## Limitations
+## Limites
 
-* Audiobookshelf can only be installed on a dedicated domain
-* No LDAP support
+* Audiobookshelf ne peut être installé que sur un domaine dédié
+* Pas de prise en charge LDAP
 
-## Administration
+## Connection
 
-* Default user is "root" with no password
-
+* L'utilisateur par défaut est `root` sans mot de passe
 ## Documentations et ressources
 
 * Site officiel de l'app : https://audiobookshelf.org/
