@@ -135,5 +135,8 @@ ynh_systemd_action --service_name=nginx --action=reload
 #=================================================
 # END OF SCRIPT
 #=================================================
+ynh_script_progression --message="Sleeping for 60 seconds" --weight=1
+
+sleep 60
 
 ynh_script_progression --message="Restoration completed for $app" --last
