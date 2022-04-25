@@ -49,6 +49,8 @@ ynh_script_progression --message="Storing installation settings..." --weight=1
 ynh_app_setting_set --app=$app --key=domain --value=$domain
 ynh_app_setting_set --app=$app --key=path --value=$path_url
 
+#ynh_app_setting_set --app=$app --key=nodejs_version --value=$nodejs_version
+
 #=================================================
 # STANDARD MODIFICATIONS
 #=================================================
@@ -105,7 +107,7 @@ ynh_script_progression --message="Installing Audiobookshelf..." --weight=10
 
 pushd $final_path
  	ynh_use_nodejs
-	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH $ynh_npm run client
+	ynh_exec_warn_less sudo -u $app $ynh_node_load_PATH $ynh_npm install run client
 popd
 
 #=================================================
