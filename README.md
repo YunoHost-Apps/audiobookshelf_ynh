@@ -30,7 +30,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 * Chromecast support on the web app
 * Fetch metadata and cover art from several sources
 
-**Shipped version:** 1.7.2~ynh1
+**Shipped version:** 2.0.11~ynh1
 
 **Demo:** https://audiobookshelf.org/
 
@@ -43,17 +43,16 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 ## Limitations
 
 * Audiobookshelf can only be installed on a dedicated domain
-* No LDAP support
+* No LDAP support, YunoHost users needs to register in the app too
 
 ## Administration
 
-* Default user is "root" with no password
+* Default user is `root` with no password
 
 ## Documentation and resources
 
 * Official app website: https://audiobookshelf.org/
 * Official user documentation: https://www.audiobookshelf.org/docs
-* Official admin documentation: https://yunohost.org/packaging_apps
 * Upstream app code repository: https://github.com/advplyr/audiobookshelf
 * YunoHost documentation for this app: https://yunohost.org/app_audiobookshelf
 * Report a bug: https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues

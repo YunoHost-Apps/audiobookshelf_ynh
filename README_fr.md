@@ -11,22 +11,22 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks.
+Audiobookshelf est un serveur auto-hébergé pour gérer et lire vos livres audio.
 
-### Features
+### Fonctionnalités
 
-* Fully **open-source**, including the [android & iOS app](https://github.com/advplyr/audiobookshelf-app) *(in beta)*
-* Stream all audiobook formats on the fly
-* Multi-user support w/ custom permissions
-* Keeps progress per user and syncs across devices
-* Auto-detects library updates, no need to re-scan
-* Upload audiobooks w/ bulk upload drag and drop folders
-* Backup your metadata + automated daily backups
+* Totalement **open-source**, ainsi que les [apps Android & iOS](https://github.com/advplyr/audiobookshelf-app) *(en version bêta)*
+* Diffusion de tous les formats de livres audio à la volée
+* Support multi-utilisateurs avec des permissions configurables
+* Sauvegarde par utilisateur et synchronisation à travers plusieurs appareils de l'avancée de lecture
+* Détection automatique des mises à jour de la bibliothèque, pas besoin de rescanner
+* Téléversement des livres audio en masse et support du glisser-déposer de dossiers
+* Sauvegarde des métadonnées et sauvegardes automatiques quotidiennes
 * Progressive Web App (PWA)
-* Chromecast support on the web app
-* Fetch metadata and cover art from several sources
+* Support de Chromecast dans la webapp
+* Récupération des métadonnées et des pochettes depuis plusieurs sources
 
-**Version incluse :** 1.7.2~ynh1
+**Version incluse :** 2.0.11~ynh1
 
 **Démo :** https://audiobookshelf.org/
 
@@ -38,18 +38,16 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 
 ## Limitations
 
-* Audiobookshelf can only be installed on a dedicated domain
-* No LDAP support
+* Audiobookshelf ne peut être installé que sur un domaine qui lui est dédié
+* Pas de support LDAP, les utilisateurs enregistrés dans YunoHost doivent se réinscrire dans l'app
 
 ## Administration
 
-* Default user is "root" with no password
-
+* L'utilisateur par défaut est `root`, sans mot de passe
 ## Documentations et ressources
 
 * Site officiel de l'app : https://audiobookshelf.org/
 * Documentation officielle utilisateur : https://www.audiobookshelf.org/docs
-* Documentation officielle de l'admin : https://yunohost.org/packaging_apps
 * Dépôt de code officiel de l'app : https://github.com/advplyr/audiobookshelf
 * Documentation YunoHost pour cette app : https://yunohost.org/app_audiobookshelf
 * Signaler un bug : https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues
