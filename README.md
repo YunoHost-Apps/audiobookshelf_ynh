@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Audiobookshelf for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/audiobookshelf.svg)](https://dash.yunohost.org/appci/app/audiobookshelf) ![](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/audiobookshelf.svg)](https://dash.yunohost.org/appci/app/audiobookshelf) ![Working status](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.maintain.svg)  
 [![Install Audiobookshelf with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=audiobookshelf)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -36,7 +36,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 
 ## Screenshots
 
-![](./doc/screenshots/example.jpg)
+![Screenshot of Audiobookshelf](./doc/screenshots/example.jpg)
 
 ## Disclaimers / important information
 
@@ -51,21 +51,22 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 
 ## Documentation and resources
 
-* Official app website: https://audiobookshelf.org/
-* Official user documentation: https://www.audiobookshelf.org/docs
-* Upstream app code repository: https://github.com/advplyr/audiobookshelf
-* YunoHost documentation for this app: https://yunohost.org/app_audiobookshelf
-* Report a bug: https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues
+* Official app website: <https://audiobookshelf.org/>
+* Official user documentation: <https://www.audiobookshelf.org/docs>
+* Upstream app code repository: <https://github.com/advplyr/audiobookshelf>
+* YunoHost documentation for this app: <https://yunohost.org/app_audiobookshelf>
+* Report a bug: <https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues>
 
 ## Developer info
 
 Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
-```
+
+``` bash
 sudo yunohost app install https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade audiobookshelf -u https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing --debug
 ```
 
-**More info regarding app packaging:** https://yunohost.org/packaging_apps
+**More info regarding app packaging:** <https://yunohost.org/packaging_apps>
