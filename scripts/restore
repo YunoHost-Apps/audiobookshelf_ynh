@@ -15,8 +15,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 
 ynh_clean_setup () {
-	#### Remove this function if there's nothing to clean before calling the remove script.
-	true
+	ynh_clean_check_starting
 }
 # Exit if an error occurs during the execution of the script
 ynh_abort_if_errors
@@ -91,7 +90,6 @@ ynh_script_progression --message="Reinstalling dependencies..." --weight=10
 
 # Define and install dependencies
 ynh_install_app_dependencies $pkg_dependencies
-
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
 
 #=================================================
@@ -121,7 +119,7 @@ yunohost service add $app --description="Audiobook server" --log="/var/log/$app/
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --timeout="120"
+ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --line_match="Listening on"
 
 #=================================================
 # GENERIC FINALIZATION
