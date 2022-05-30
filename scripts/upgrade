@@ -25,6 +25,7 @@ datadir=$(ynh_app_setting_get --app=$app --key=datadir)
 #=================================================
 # CHECK VERSION
 #=================================================
+ynh_script_progression --message="Checking version..."
 
 upgrade_type=$(ynh_check_app_version_changed)
 
@@ -56,8 +57,6 @@ ynh_systemd_action --service_name=$app --action="stop" --log_path="/var/log/$app
 # ENSURE DOWNWARD COMPATIBILITY
 #=================================================
 ynh_script_progression --message="Ensuring downward compatibility..."
-
-ynh_delete_file_checksum --file="$final_path/.env"
 
 #=================================================
 # CREATE DEDICATED USER
