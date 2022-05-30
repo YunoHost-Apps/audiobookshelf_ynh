@@ -97,9 +97,9 @@ ynh_script_progression --message="Configuring NGINX web server..." --weight=1
 ynh_add_nginx_config
 
 #=================================================
-# Node Stuff
+# BUILD APP
 #=================================================
-ynh_script_progression --message="Installing Audiobookshelf..." --weight=10
+ynh_script_progression --message="Building app..." --weight=10
 
 ynh_use_nodejs
 
