@@ -1,4 +1,4 @@
-SOURCE_URL=https://github.com/advplyr/audiobookshelf/releases/tag/v2.0.20
+SOURCE_URL=https://github.com/advplyr/audiobookshelf/archive/refs/tags/v2.0.20.tar.gz
 SOURCE_SUM=839db8c2a68e429833066b2bd9597e95acdd8ac4a9dba8248beac367d417f94e
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
