@@ -14,8 +14,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 
 ynh_clean_setup () {
-	### Remove this function if there's nothing to clean before calling the remove script.
-	true
+	ynh_clean_check_starting
 }
 # Exit if an error occurs during the execution of the script
 ynh_abort_if_errors
@@ -49,8 +48,6 @@ ynh_script_progression --message="Storing installation settings..." --weight=1
 ynh_app_setting_set --app=$app --key=domain --value=$domain
 ynh_app_setting_set --app=$app --key=path --value=$path_url
 
-#ynh_app_setting_set --app=$app --key=nodejs_version --value=$nodejs_version
-
 #=================================================
 # STANDARD MODIFICATIONS
 #=================================================
@@ -59,7 +56,7 @@ ynh_app_setting_set --app=$app --key=path --value=$path_url
 ynh_script_progression --message="Finding an available port..." --weight=1
 
 # Find an available port
-port=$(ynh_find_port --port=3333)
+port=$(ynh_find_port --port=8095)
 ynh_app_setting_set --app=$app --key=port --value=$port
 
 #=================================================
@@ -68,7 +65,6 @@ ynh_app_setting_set --app=$app --key=port --value=$port
 ynh_script_progression --message="Installing dependencies..." --weight=10
 
 ynh_install_app_dependencies $pkg_dependencies
-
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
 
 #=================================================
@@ -101,13 +97,20 @@ ynh_script_progression --message="Configuring NGINX web server..." --weight=1
 ynh_add_nginx_config
 
 #=================================================
-# Node Stuff
+# BUILD APP
 #=================================================
-ynh_script_progression --message="Installing Audiobookshelf..." --weight=10
+ynh_script_progression --message="Building app..." --weight=10
+
+ynh_use_nodejs
+
+pushd $final_path/client
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm ci
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm cache clean --force
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm run generate
+popd
 
 pushd $final_path
- 	ynh_use_nodejs
-	ynh_exec_warn_less sudo -u $app $ynh_node_load_PATH $ynh_npm install run client
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm ci --only=production
 popd
 
 #=================================================
@@ -129,10 +132,10 @@ chown -R $app:www-data "$datadir"
 #=================================================
 ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-ynh_add_config --template="../conf/dev.js" --destination="$final_path/dev.js"
+ynh_add_config --template="../conf/.env" --destination="$final_path/.env"
 
-chmod 400 "$final_path/dev.js"
-chown $app:$app "$final_path/dev.js"
+chmod 400 "$final_path/.env"
+chown $app:$app "$final_path/.env"
 
 #=================================================
 # SETUP SYSTEMD
@@ -165,7 +168,7 @@ yunohost service add $app --description="Audiobook server" --log="/var/log/$app/
 ynh_script_progression --message="Starting a systemd service..." --weight=3
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --timeout="120"
+ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --line_match="Listening on"
 
 #=================================================
 # SETUP SSOWAT
