@@ -58,6 +58,19 @@ ynh_systemd_action --service_name=$app --action="stop" --log_path="/var/log/$app
 #=================================================
 ynh_script_progression --message="Ensuring downward compatibility..."
 
+# If datadir doesn't exist, create it
+if [ -z $datadir ]; then
+	datadir=/home/yunohost.app/$app
+	ynh_app_setting_set --app=$app --key=datadir --value=$datadir
+	mkdir -p $datadir
+	rsync -arz "$final_path/config/" "$datadir/config/" --delete-after --remove-source-files
+	rsync -arz "$final_path/audiobooks/" "$datadir/audiobooks/" --delete-after --remove-source-files
+	rsync -arz "$final_path/metadata/" "$datadir/metadata/" --delete-after --remove-source-files
+	chmod 750 "$datadir"
+	chmod -R o-rwx "$datadir"
+	chown -R $app:$app "$datadir"
+fi
+
 #=================================================
 # CREATE DEDICATED USER
 #=================================================
