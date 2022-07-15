@@ -56,7 +56,8 @@ tempdir="$(mktemp -d)"
 
 # Download sources and calculate checksum
 filename="v$version.tar.gz"
-curl --silent -4 -L "https://github.com/advplyr/audiobookshelf/archive/refs/tags/v$version.tar.gz" -o "$tempdir/$filename"
+asset_url="https://github.com/advplyr/audiobookshelf/archive/refs/tags/v$version.tar.gz"
+curl --silent -4 -L $asset_url -o "$tempdir/$filename"
 checksum=$(sha256sum "$tempdir/$filename" | head -c 64)
 
 # Delete temporary directory
