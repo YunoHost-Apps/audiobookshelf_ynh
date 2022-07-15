@@ -49,6 +49,8 @@ fi
 # UPDATE SOURCE FILES
 #=================================================
 
+src="app"
+
 # Create the temporary directory
 tempdir="$(mktemp -d)"
 
@@ -77,12 +79,6 @@ SOURCE_IN_SUBDIR=true
 SOURCE_FILENAME=
 EOT
 echo "... conf/$src.src updated"
-
-else
-echo "... asset ignored"
-fi
-
-done
 
 #=================================================
 # SPECIFIC UPDATE STEPS
