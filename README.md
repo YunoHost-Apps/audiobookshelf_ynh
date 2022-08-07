@@ -32,6 +32,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 
 **Shipped version:** 2.1.2~ynh1
 
+
 **Demo:** https://audiobookshelf.org/
 
 ## Screenshots
