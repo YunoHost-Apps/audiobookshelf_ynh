@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/advplyr/audiobookshelf/archive/refs/tags/v2.1.2.tar.gz
-SOURCE_SUM=1bc0bbf1af28f55b220142bdbd4aa87c3959d6d04a97408bc442f1928c3bf2d7
+SOURCE_URL=https://github.com/advplyr/audiobookshelf/archive/refs/tags/v2.1.4.tar.gz
+SOURCE_SUM=23cababf168107087649a54fa148f907a8008bc01bde3c22d4e0ccb8ba7a8848
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
