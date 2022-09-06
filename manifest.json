@@ -6,7 +6,7 @@
         "en": "Audiobook server for managing and playing your audiobooks",
         "fr": "Serveur de livres audio pour gérer et lire vos livres audio"
     },
-    "version": "2.1.4~ynh1",
+    "version": "2.1.5~ynh1",
     "url": "https://audiobookshelf.org/",
     "upstream": {
         "license": "AGPL-3.0-only",
