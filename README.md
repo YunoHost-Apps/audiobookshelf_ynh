@@ -30,7 +30,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 * Chromecast support on the web app
 * Fetch metadata and cover art from several sources
 
-**Shipped version:** 2.1.5~ynh1
+**Shipped version:** 2.2.0~ynh1 *(:warning: This is the `ci-auto-update-v2.2.0` branch. The [`master` branch](https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/master) used in the catalog is currently on version 2.1.5\~ynh1.)*
 
 
 **Demo:** https://audiobookshelf.org/
