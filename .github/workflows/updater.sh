@@ -49,11 +49,14 @@ fi
 # UPDATE SOURCE FILES
 #=================================================
 
+src="app"
+
 # Create the temporary directory
 tempdir="$(mktemp -d)"
 
 # Download sources and calculate checksum
-filename="https://github.com/advplyr/audiobookshelf/archive/refs/tags/v$version.tar.gz"
+filename="v$version.tar.gz"
+asset_url="https://github.com/advplyr/audiobookshelf/archive/refs/tags/v$version.tar.gz"
 curl --silent -4 -L $asset_url -o "$tempdir/$filename"
 checksum=$(sha256sum "$tempdir/$filename" | head -c 64)
 
@@ -77,12 +80,6 @@ SOURCE_IN_SUBDIR=true
 SOURCE_FILENAME=
 EOT
 echo "... conf/$src.src updated"
-
-else
-echo "... asset ignored"
-fi
-
-done
 
 #=================================================
 # SPECIFIC UPDATE STEPS
