@@ -6,6 +6,7 @@ It shall NOT be edited by hand.
 # Audiobookshelf pour YunoHost
 
 [![Niveau d’intégration](https://dash.yunohost.org/integration/audiobookshelf.svg)](https://dash.yunohost.org/appci/app/audiobookshelf) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.maintain.svg)
+
 [![Installer Audiobookshelf avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=audiobookshelf)
 
 *[Read this readme in english.](./README.md)*
