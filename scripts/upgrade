@@ -10,39 +10,11 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# LOAD SETTINGS
-#=================================================
-#REMOVEME? ynh_script_progression --message="Loading installation settings..." --weight=1
-
-#REMOVEME? app=$YNH_APP_INSTANCE_NAME
-
-#REMOVEME? domain=$(ynh_app_setting_get --app=$app --key=domain)
-#REMOVEME? path=$(ynh_app_setting_get --app=$app --key=path)
-#REMOVEME? #REMOVEME? install_dir=$(ynh_app_setting_get --app=$app --key=install_dir)
-#REMOVEME? port=$(ynh_app_setting_get --app=$app --key=port)
-#REMOVEME? data_dir=$(ynh_app_setting_get --app=$app --key=data_dir)
-
-#=================================================
 # CHECK VERSION
 #=================================================
 ynh_script_progression --message="Checking version..."
 
 upgrade_type=$(ynh_check_app_version_changed)
-
-#=================================================
-# BACKUP BEFORE UPGRADE THEN ACTIVE TRAP
-#=================================================
-#REMOVEME? ynh_script_progression --message="Backing up the app before upgrading (may take a while)..." --weight=1
-
-# Backup the current version of the app
-#REMOVEME? ynh_backup_before_upgrade
-#REMOVEME? ynh_clean_setup () {
-	ynh_clean_check_starting
-	# Restore it if the upgrade fails
-#REMOVEME? 	ynh_restore_upgradebackup
-}
-# Exit if an error occurs during the execution of the script
-#REMOVEME? ynh_abort_if_errors
 
 #=================================================
 # STANDARD UPGRADE STEPS
@@ -61,23 +33,16 @@ ynh_script_progression --message="Ensuring downward compatibility..."
 # If data_dir doesn't exist, create it
 if [ -z $data_dir ]; then
 	data_dir=/home/yunohost.app/$app
-#REMOVEME? 	ynh_app_setting_set --app=$app --key=data_dir --value=$data_dir
+
 	mkdir -p $data_dir
 	rsync -arz "$install_dir/config/" "$data_dir/config/" --delete-after --remove-source-files
 	rsync -arz "$install_dir/audiobooks/" "$data_dir/audiobooks/" --delete-after --remove-source-files
 	rsync -arz "$install_dir/metadata/" "$data_dir/metadata/" --delete-after --remove-source-files
+
 	chmod 750 "$data_dir"
 	chmod -R o-rwx "$data_dir"
 	chown -R $app:$app "$data_dir"
 fi
-
-#=================================================
-# CREATE DEDICATED USER
-#=================================================
-#REMOVEME? ynh_script_progression --message="Making sure dedicated system user exists..." --weight=1
-
-# Create a dedicated user (if not existing)
-#REMOVEME? ynh_system_user_create --username=$app --home_dir="$install_dir"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -106,9 +71,8 @@ ynh_add_nginx_config
 #=================================================
 # UPGRADE DEPENDENCIES
 #=================================================
-#REMOVEME? ynh_script_progression --message="Upgrading dependencies..." --weight=10
+ynh_script_progression --message="Upgrading dependencies..." --weight=10
 
-#REMOVEME? ynh_install_app_dependencies $pkg_dependencies
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
 
 #=================================================
@@ -174,13 +138,6 @@ yunohost service add $app --description="Audiobook server" --log="/var/log/$app/
 ynh_script_progression --message="Starting a systemd service..." --weight=3
 
 ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --line_match="Listening on"
-
-#=================================================
-# RELOAD NGINX
-#=================================================
-#REMOVEME? ynh_script_progression --message="Reloading NGINX web server..." --weight=1
-
-#REMOVEME? ynh_systemd_action --service_name=nginx --action=reload
 
 #=================================================
 # END OF SCRIPT

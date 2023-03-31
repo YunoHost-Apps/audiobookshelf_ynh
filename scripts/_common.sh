@@ -5,7 +5,6 @@
 #=================================================
 
 # dependencies used by the app
-#REMOVEME? pkg_dependencies="ffmpeg"
 
 # nodejs version
 nodejs_version=16
