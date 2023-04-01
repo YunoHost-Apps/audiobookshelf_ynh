@@ -40,7 +40,7 @@ ram.runtime = "50M"
         [resources.sources.main]
         url = "https://github.com/advplyr/audiobookshelf/archive/refs/tags/v2.2.17.tar.gz"
         sha256 = "d873015fbf4b9013002ce247d216fbc1edb22764064ac7c960d8cfa095ddf0cd"
-
+        autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
