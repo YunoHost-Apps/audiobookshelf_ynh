@@ -39,17 +39,6 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 
 ![Screenshot of Audiobookshelf](./doc/screenshots/example.jpg)
 
-## Disclaimers / important information
-
-## Limitations
-
-* Audiobookshelf can only be installed on a dedicated domain
-* No LDAP support, YunoHost users needs to register in the app too
-
-## Administration
-
-* Default user is `root` with no password
-
 ## Documentation and resources
 
 * Official app website: <https://audiobookshelf.org/>
