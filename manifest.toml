@@ -1,0 +1,63 @@
+packaging_format = 2
+
+id = "audiobookshelf"
+name = "Audiobookshelf"
+description.en = "Audiobook server for managing and playing your audiobooks"
+description.fr = "Serveur de livres audio pour gérer et lire vos livres audio"
+
+version = "2.2.17~ynh1"
+
+maintainers = ["Navan Chauhan"]
+
+[upstream]
+license = "AGPL-3.0-only"
+website = "https://audiobookshelf.org/"
+demo = "https://audiobookshelf.org/"
+userdoc = "https://www.audiobookshelf.org/docs"
+code = "https://github.com/advplyr/audiobookshelf"
+
+[integration]
+yunohost = ">= 11.1.15"
+architectures = "all"
+multi_instance = true
+ldap = false 
+sso = false
+disk = "50M" 
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+    full_domain = true
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+    [resources.sources]
+        [resources.sources.main]
+        url = "https://github.com/advplyr/audiobookshelf/archive/refs/tags/v2.2.17.tar.gz"
+        sha256 = "d873015fbf4b9013002ce247d216fbc1edb22764064ac7c960d8cfa095ddf0cd"
+        autoupdate.strategy = "latest_github_tag"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    api.url = "/api"
+    api.allowed = "visitors"
+    api.show_tile = false
+    api.protected = true
+
+    [resources.ports]
+    main.default = 8095
+
+    [resources.apt]
+    packages = "ffmpeg"
