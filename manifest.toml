@@ -12,7 +12,6 @@ maintainers = ["Navan Chauhan"]
 [upstream]
 license = "AGPL-3.0-only"
 website = "https://audiobookshelf.org/"
-demo = "https://audiobookshelf.org/"
 userdoc = "https://www.audiobookshelf.org/docs"
 code = "https://github.com/advplyr/audiobookshelf"
 
