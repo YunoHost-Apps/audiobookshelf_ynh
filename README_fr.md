@@ -35,6 +35,7 @@ Audiobookshelf est un serveur auto-hébergé pour gérer et lire vos livres audi
 
 ## Captures d’écran
 
+![Capture d’écran de Audiobookshelf](./doc/screenshots/audiobookshelf.png)
 ![Capture d’écran de Audiobookshelf](./doc/screenshots/example.jpg)
 
 ## Documentations et ressources
