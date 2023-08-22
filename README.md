@@ -35,7 +35,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 
 ## Screenshots
 
-![Screenshot of Audiobookshelf](./doc/screenshots/audiobookshelf.png)
+![Screenshot of Audiobookshelf](./doc/screenshots/audiobookshelf.jpg)
 
 ## Documentation and resources
 
