@@ -108,6 +108,14 @@ ynh_script_progression --message="Starting a systemd service..." --weight=3
 ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --line_match="Listening on"
 
 #=================================================
+# SETUP SSOWAT
+#=================================================
+ynh_script_progression --message="Configuring permissions..." --weight=3
+
+ynh_permission_url --permission="main" --auth_header="false"
+ynh_permission_url --permission="api" --auth_header="false"
+
+#=================================================
 # END OF SCRIPT
 #=================================================
 
