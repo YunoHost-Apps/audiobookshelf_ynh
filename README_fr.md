@@ -31,7 +31,7 @@ Audiobookshelf est un serveur auto-hébergé pour gérer et lire vos livres audi
 * Support de Chromecast dans la webapp
 * Récupération des métadonnées et des pochettes depuis plusieurs sources
 
-**Version incluse :** 2.4.3~ynh1
+**Version incluse :** 2.4.4~ynh1
 
 ## Captures d’écran
 
@@ -42,7 +42,6 @@ Audiobookshelf est un serveur auto-hébergé pour gérer et lire vos livres audi
 * Site officiel de l’app : <https://audiobookshelf.org/>
 * Documentation officielle utilisateur : <https://www.audiobookshelf.org/docs>
 * Dépôt de code officiel de l’app : <https://github.com/advplyr/audiobookshelf>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_audiobookshelf>
 * Signaler un bug : <https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues>
 
 ## Informations pour les développeurs
