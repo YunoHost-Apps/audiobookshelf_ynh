@@ -5,7 +5,7 @@ name = "Audiobookshelf"
 description.en = "Audiobook server for managing and playing your audiobooks"
 description.fr = "Serveur de livres audio pour gérer et lire vos livres audio"
 
-version = "2.4.4~ynh1"
+version = "2.4.4~ynh2"
 
 maintainers = ["Navan Chauhan"]
 
