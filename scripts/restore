@@ -11,6 +11,16 @@ source ../settings/scripts/_common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
+# REINSTALL DEPENDENCIES
+#=================================================
+ynh_script_progression --message="Reinstalling dependencies..." --weight=10
+
+ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
+
+# Upgrade NPM
+ynh_npm install --global npm@7.21.1
+
+#=================================================
 # STANDARD RESTORATION STEPS
 #=================================================
 # RESTORE THE NGINX CONFIGURATION
@@ -45,14 +55,6 @@ chown -R $app:www-data "$data_dir"
 
 #=================================================
 # SPECIFIC RESTORATION
-#=================================================
-# REINSTALL DEPENDENCIES
-#=================================================
-ynh_script_progression --message="Reinstalling dependencies..." --weight=10
-
-# Define and install dependencies
-ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
-
 #=================================================
 # RESTORE SYSTEMD
 #=================================================

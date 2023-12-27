@@ -10,6 +10,16 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
+# INSTALL DEPENDENCIES
+#=================================================
+ynh_script_progression --message="Upgrading dependencies..." --weight=10
+
+ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
+
+# Upgrade NPM
+ynh_npm install --global npm@7.21.1
+
+#=================================================
 # CHECK VERSION
 #=================================================
 ynh_script_progression --message="Checking version..."
@@ -67,13 +77,6 @@ ynh_script_progression --message="Upgrading NGINX web server configuration..." -
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
-
-#=================================================
-# UPGRADE DEPENDENCIES
-#=================================================
-ynh_script_progression --message="Upgrading dependencies..." --weight=10
-
-ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
 
 #=================================================
 # SPECIFIC UPGRADE
