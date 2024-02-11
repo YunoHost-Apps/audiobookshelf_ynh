@@ -18,7 +18,6 @@ ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
 
 # Upgrade NPM
 ynh_npm install --global npm@7.21.1
-
 #=================================================
 # CHECK VERSION
 #=================================================
