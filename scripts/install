@@ -25,7 +25,8 @@ ynh_npm install --global npm@7.21.1
 ynh_script_progression --message="Setting up source files..." --weight=1
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir" --source_id="main"
+ynh_setup_source --dest_dir="$install_dir" --source_id="tone"
 
 chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
