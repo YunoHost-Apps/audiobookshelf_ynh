@@ -30,6 +30,7 @@ Audiobookshelf est un serveur auto-hébergé pour gérer et lire vos livres audi
 * Progressive Web App (PWA)
 * Support de Chromecast dans la webapp
 * Récupération des métadonnées et des pochettes depuis plusieurs sources
+**Version incluse :** 2.8.1~ynh1
 
 ## Captures d’écran
 
