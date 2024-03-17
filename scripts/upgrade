@@ -62,8 +62,8 @@ then
 	ynh_script_progression --message="Upgrading source files..." --weight=3
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir" --keep=".env"
-	ynh_setup_source --dest_dir="$install_dir" --source_id="tone"
+	ynh_setup_source --dest_dir="$install_dir" --full_replace=1 --keep=".env"
+	ynh_setup_source --dest_dir="$install_dir" --source_id="tone" --full_replace=1
 fi
 
 chmod 750 "$install_dir"
