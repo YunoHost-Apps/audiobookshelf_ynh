@@ -30,8 +30,7 @@ Audiobookshelf est un serveur auto-hébergé pour gérer et lire vos livres audi
 * Progressive Web App (PWA)
 * Support de Chromecast dans la webapp
 * Récupération des métadonnées et des pochettes depuis plusieurs sources
-
-**Version incluse :** 2.8.0~ynh1
+**Version incluse :** 2.8.1~ynh1
 
 ## Captures d’écran
 
@@ -39,11 +38,11 @@ Audiobookshelf est un serveur auto-hébergé pour gérer et lire vos livres audi
 
 ## Documentations et ressources
 
-* Site officiel de l’app : <https://audiobookshelf.org/>
-* Documentation officielle utilisateur : <https://www.audiobookshelf.org/docs>
-* Dépôt de code officiel de l’app : <https://github.com/advplyr/audiobookshelf>
-* YunoHost Store: <https://apps.yunohost.org/app/audiobookshelf>
-* Signaler un bug : <https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues>
+- Site officiel de l’app : <https://audiobookshelf.org/>
+- Documentation officielle utilisateur : <https://www.audiobookshelf.org/docs>
+- Dépôt de code officiel de l’app : <https://github.com/advplyr/audiobookshelf>
+- YunoHost Store : <https://apps.yunohost.org/app/audiobookshelf>
+- Signaler un bug : <https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues>
 
 ## Informations pour les développeurs
 
@@ -51,7 +50,7 @@ Merci de faire vos pull request sur la [branche testing](https://github.com/Yuno
 
 Pour essayer la branche testing, procédez comme suit.
 
-``` bash
+```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing --debug
 ou
 sudo yunohost app upgrade audiobookshelf -u https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing --debug
