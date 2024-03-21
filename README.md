@@ -30,8 +30,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 * Progressive Web App (PWA)
 * Chromecast support on the web app
 * Fetch metadata and cover art from several sources
-
-**Shipped version:** 2.8.0~ynh1
+**Shipped version:** 2.8.1~ynh1
 
 ## Screenshots
 
@@ -39,11 +38,11 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 
 ## Documentation and resources
 
-* Official app website: <https://audiobookshelf.org/>
-* Official user documentation: <https://www.audiobookshelf.org/docs>
-* Upstream app code repository: <https://github.com/advplyr/audiobookshelf>
-* YunoHost Store: <https://apps.yunohost.org/app/audiobookshelf>
-* Report a bug: <https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues>
+- Official app website: <https://audiobookshelf.org/>
+- Official user documentation: <https://www.audiobookshelf.org/docs>
+- Upstream app code repository: <https://github.com/advplyr/audiobookshelf>
+- YunoHost Store: <https://apps.yunohost.org/app/audiobookshelf>
+- Report a bug: <https://github.com/YunoHost-Apps/audiobookshelf_ynh/issues>
 
 ## Developer info
 
@@ -51,7 +50,7 @@ Please send your pull request to the [testing branch](https://github.com/YunoHos
 
 To try the testing branch, please proceed like that.
 
-``` bash
+```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade audiobookshelf -u https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing --debug

@@ -5,7 +5,7 @@ name = "Audiobookshelf"
 description.en = "Audiobook server for managing and playing your audiobooks"
 description.fr = "Serveur de livres audio pour gérer et lire vos livres audio"
 
-version = "2.8.0~ynh1"
+version = "2.8.1~ynh1"
 
 maintainers = ["Navan Chauhan"]
 
@@ -36,13 +36,13 @@ ram.runtime = "50M"
 [resources]
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/advplyr/audiobookshelf/archive/refs/tags/v2.8.0.tar.gz"
-        sha256 = "bbe6b96a791aa11ab91369bdfc82b1984650a5e026c676df6faaaf0ab84510ed"
+        url = "https://github.com/advplyr/audiobookshelf/archive/refs/tags/v2.8.1.tar.gz"
+        sha256 = "f6e65108129da17000c9a9a7c2f274ed29359a98f150435e8b6e20cb554572c7"
         autoupdate.strategy = "latest_github_tag"
 
         [resources.sources.tone]
-        url = "https://github.com/sandreas/tone/releases/download/v0.1.5/tone-0.1.5-linux-x64.tar.gz"
-        sha256 = "29c197b21c6e36a3b889ebd6bb1fbdd2c95e489ac6508d010adcf6f69ab8ceba"
+        url = "https://github.com/sandreas/tone/archive/refs/tags/v0.1.5.tar.gz"
+        sha256 = "8db1777a401d7d1fe8ee1a2fbe8971a3fd52200b7437fb7f751f8ac3782b500f"
         autoupdate.strategy = "latest_github_release"
         autoupdate.upstream = "https://github.com/sandreas/tone"
 
