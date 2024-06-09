@@ -42,7 +42,7 @@ ram.runtime = "50M"
 
         [resources.sources.tone]
         url = "https://github.com/sandreas/tone/archive/refs/tags/v0.1.7.tar.gz"
-        sha256 = "5a8439c589bbdfd3eb2f7c9bfec3356075210e5dc9117f4072a9b2510eb3d4c5"
+        sha256 = "9693d8aa74454607fe1d79592c9c18a6da4c73a8fa67d4a414ec9c02c6dde61a"
         autoupdate.strategy = "latest_github_release"
         autoupdate.upstream = "https://github.com/sandreas/tone"
 
