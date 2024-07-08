@@ -5,7 +5,7 @@
 
 # YunoHost 上的 Audiobookshelf
 
-[![集成程度](https://dash.yunohost.org/integration/audiobookshelf.svg)](https://dash.yunohost.org/appci/app/audiobookshelf) ![工作状态](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/audiobookshelf.svg)](https://ci-apps.yunohost.org/ci/apps/audiobookshelf/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.maintain.svg)
 
 [![使用 YunoHost 安装 Audiobookshelf](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=audiobookshelf)
 
@@ -31,7 +31,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 * Chromecast support on the web app
 * Fetch metadata and cover art from several sources
 
-**分发版本：** 2.10.1~ynh1
+**分发版本：** 2.11.0~ynh1
 
 ## 截图
 
