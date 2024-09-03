@@ -31,7 +31,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 * Chromecast support on the web app
 * Fetch metadata and cover art from several sources
 
-**分发版本：** 2.13.2~ynh1
+**分发版本：** 2.13.3~ynh1
 
 ## 截图
 
