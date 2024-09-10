@@ -31,7 +31,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 * Chromecast support on the web app
 * Fetch metadata and cover art from several sources
 
-**Versión actual:** 2.13.3~ynh1
+**Versión actual:** 2.13.4~ynh1
 
 ## Capturas
 
@@ -47,7 +47,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/audiobookshelf_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
