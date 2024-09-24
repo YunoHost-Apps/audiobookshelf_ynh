@@ -18,49 +18,26 @@ ynh_script_progression "Stopping $app's systemd service..."
 ynh_systemctl --service=$app --action="stop"
 
 #=================================================
-# ENSURE DOWNWARD COMPATIBILITY
-#=================================================
-ynh_script_progression "Ensuring downward compatibility..."
-
-# If data_dir doesn't exist, create it
-if [ -z $data_dir ]; then
-	data_dir=/home/yunohost.app/$app
-
-	mkdir -p $data_dir
-	rsync -arz "$install_dir/config/" "$data_dir/config/" --delete-after --remove-source-files
-	rsync -arz "$install_dir/audiobooks/" "$data_dir/audiobooks/" --delete-after --remove-source-files
-	rsync -arz "$install_dir/metadata/" "$data_dir/metadata/" --delete-after --remove-source-files
-
-	chmod 750 "$data_dir"
-	chmod -R o-rwx "$data_dir"
-	chown -R $app:$app "$data_dir"
-fi
-
-#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$install_dir" --keep=".env"
-ynh_setup_source --dest_dir="$install_dir" --source_id="tone"
+ynh_setup_source --dest_dir="$install_dir" --full_replace
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 750 "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app:www-data "$install_dir"
 #=================================================
 # UPGRADE APP
 #=================================================
 ynh_script_progression "Upgrading app..."
 
 pushd $install_dir/client
-	ynh_hide_warnings ynh_exec_as_app node_load_PATH npm ci
-	ynh_hide_warnings ynh_exec_as_app node_load_PATH npm cache clean --force
-	ynh_hide_warnings ynh_exec_as_app node_load_PATH npm run generate
+	ynh_hide_warnings ynh_exec_as_app npm ci
+	ynh_hide_warnings ynh_exec_as_app npm cache clean --force
+	ynh_hide_warnings ynh_exec_as_app npm run generate
 popd
 
 pushd $install_dir
-	ynh_hide_warnings ynh_exec_as_app node_load_PATH npm ci --only=production
+	ynh_hide_warnings ynh_exec_as_app npm ci --only=production
 popd
 
 #=================================================
@@ -69,9 +46,6 @@ popd
 ynh_script_progression "Updating configuration..."
 
 ynh_config_add --template=".env" --destination="$install_dir/.env"
-
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 400 "$install_dir/.env"
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown $app:$app "$install_dir/.env"
 
 #=================================================
 # UPDATE A CONFIG FILE
