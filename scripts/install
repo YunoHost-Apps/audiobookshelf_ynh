@@ -41,6 +41,14 @@ ynh_script_progression "Adding $app's configuration..."
 ynh_config_add --template=".env" --destination="$install_dir/.env"
 
 #=================================================
+# YUNOHOST MULTIMEDIA INTEGRATION
+#=================================================
+ynh_script_progression --message="Adding multimedia directories..."
+
+ynh_multimedia_build_main_dir
+ynh_multimedia_addaccess $app
+
+#=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
