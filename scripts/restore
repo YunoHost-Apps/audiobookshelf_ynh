@@ -30,7 +30,7 @@ chown -R $app:www-data "$data_dir"
 #=================================================
 # YUNOHOST MULTIMEDIA INTEGRATION
 #=================================================
-ynh_script_progression --message="Restoring acccess to multimedia directories..."
+ynh_script_progression "Restoring acccess to multimedia directories..."
 
 ynh_multimedia_build_main_dir
 ynh_multimedia_addaccess $app
