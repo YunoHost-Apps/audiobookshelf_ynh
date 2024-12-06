@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # Audiobookshelf pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/audiobookshelf.svg)](https://ci-apps.yunohost.org/ci/apps/audiobookshelf/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/audiobookshelf)](https://ci-apps.yunohost.org/ci/apps/audiobookshelf/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/audiobookshelf)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/audiobookshelf)
 
 [![Installer Audiobookshelf avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=audiobookshelf)
 
@@ -31,7 +33,7 @@ Audiobookshelf est un serveur auto-hébergé pour gérer et lire vos livres audi
 * Support de Chromecast dans la webapp
 * Récupération des métadonnées et des pochettes depuis plusieurs sources
 
-**Version incluse :** 2.17.2~ynh1
+**Version incluse :** 2.17.4~ynh1
 
 ## Captures d’écran
 
