@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Audiobookshelf untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/audiobookshelf.svg)](https://ci-apps.yunohost.org/ci/apps/audiobookshelf/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/audiobookshelf.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/audiobookshelf)](https://ci-apps.yunohost.org/ci/apps/audiobookshelf/)
+![Status kerja](https://apps.yunohost.org/badge/state/audiobookshelf)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/audiobookshelf)
 
 [![Pasang Audiobookshelf dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=audiobookshelf)
 
@@ -31,7 +33,7 @@ Audiobookshelf is a self-hosted audiobook server for managing and playing your a
 * Chromecast support on the web app
 * Fetch metadata and cover art from several sources
 
-**Versi terkirim:** 2.17.2~ynh1
+**Versi terkirim:** 2.17.4~ynh1
 
 ## Tangkapan Layar
 
