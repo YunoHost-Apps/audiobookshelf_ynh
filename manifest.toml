@@ -16,7 +16,7 @@ userdoc = "https://www.audiobookshelf.org/docs"
 code = "https://github.com/advplyr/audiobookshelf"
 
 [integration]
-yunohost = ">= 12.1.15"
+yunohost = ">= 12.1.38"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
