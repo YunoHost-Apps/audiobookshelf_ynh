@@ -5,7 +5,7 @@ name = "Audiobookshelf"
 description.en = "Audiobook server for managing and playing your audiobooks"
 description.fr = "Serveur de livres audio pour gérer et lire vos livres audio"
 
-version = "2.33.1~ynh1"
+version = "2.33.2~ynh1"
 
 maintainers = ["Navan Chauhan"]
 
@@ -20,8 +20,10 @@ yunohost = ">= 12.1.38"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
+
 ldap = false
 sso = false
+
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
@@ -37,8 +39,8 @@ ram.runtime = "50M"
 [resources]
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/advplyr/audiobookshelf/archive/refs/tags/v2.33.1.tar.gz"
-        sha256 = "aefcd69bee70a51a6219833b87ac729629c761538c4aeff37a6979132415b12e"
+        url = "https://github.com/advplyr/audiobookshelf/archive/refs/tags/v2.33.2.tar.gz"
+        sha256 = "b01198dbcd6001ad0d611274c5ab7ead97877e291bb089523c13132a2cb2a747"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]

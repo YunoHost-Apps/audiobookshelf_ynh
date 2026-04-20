@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -71,7 +70,7 @@ yunohost service add $app --description="Audiobook server" --log="/var/log/$app/
 ynh_script_progression "Starting $app's systemd service..."
 
 # Start a systemd service
-ynh_systemctl --service=$app --action="start"  --wait_until="Listening on"
+ynh_systemctl --service=$app --action="start" --wait_until="Listening on"
 
 #=================================================
 # END OF SCRIPT
